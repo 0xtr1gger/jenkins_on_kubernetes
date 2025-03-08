@@ -1,14 +1,20 @@
-# Jenkins on Kubernetes
+# Jenkins on AKS
 
-This repository contains Kubernetes manifests necessary to deploy Jenkins on a Kubernetes cluster. 
+Welcome to my Jenkins on AKS project!
 
->This project is under development, and the setup is tested on a local **`k3d`** cluster, and it's currently using `local` persistent volumes for Jenkins data. This will be fixed in the future.
+This repository contains all necessary files to set up an AKS (Azure Kubernetes Service) cluster with Terraform, and then deploy Jenkins CI/CD infrastructure on that cluster.
 
-- Jenkins runs as a Docker container on one of the cluster nodes. It can be accessed with an ingress.
+>Please, keep in mind that this project is still under development.
 
-**Current setup**
+Technologies used:
+- Kubernetes
+- Docker
+- Terraform
+- Jenkins
 
-To start the lab:
+## Local setup 
+
+It is possble to launch Jenkins Server on a local `k3d` cluster for testing or demonstration purposes. Below are instructions on how to do that.
 
 1. Create a `k3d` cluster:
 

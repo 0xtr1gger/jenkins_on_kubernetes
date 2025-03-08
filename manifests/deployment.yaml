@@ -13,6 +13,7 @@ spec:
       labels:
         app: jenkins-server
     spec:
+      serviceAccountName: jenkins-admin
       containers:
         - name: jenkins-server
           image: jenkins/jenkins:lts
