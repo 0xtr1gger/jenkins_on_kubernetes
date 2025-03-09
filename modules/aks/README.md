@@ -1,3 +1,7 @@
+## terraform-azurerm-aks
+
+This module provisions an Azure Kubernetes Service (AKS) cluster.
+
 ## Requirements
 
 No requirements.
