@@ -13,12 +13,15 @@ spec:
       labels:
         app: jenkins-server
     spec:
-      serviceAccountName: jenkins-admin
+      #serviceAccountName: jenkins-admin
+      securityContext:
+        fsGroup: 0
+        runAsUser: 0
       containers:
         - name: jenkins-server
           image: jenkins/jenkins:lts
           volumeMounts:
-          - name: jenkins-volume
+          - name: jenkins-home
             mountPath: /var/jenkins_home
           ports:
           - name: httpport
@@ -42,6 +45,6 @@ spec:
             timeoutSeconds: 5
             failureThreshold: 3
       volumes:
-        - name: jenkins-volume
+        - name: jenkins-home
           persistentVolumeClaim:
             claimName: jenkins-claim

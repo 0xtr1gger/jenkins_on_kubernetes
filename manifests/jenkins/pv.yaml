@@ -12,16 +12,9 @@ spec:
   volumeMode: Filesystem # the volume will be mounted into pods as a directory
   accessModes:
   - ReadWriteOnce
-  local:
-    path: /tmp/jenkins # the volume uses path in a cluster node as a storage
-  nodeAffinity: # only required for local, defines which nodes can access the volume
-    required:
-      nodeSelectorTerms:
-      - matchExpressions:
-        - key: kubernetes.io/hostname
-          operator: In
-          values:
-          - k3d-k3s-default-agent-0
+  hostPath:
+    path: "/mnt/jenkins_data"
+    type: DirectoryOrCreate
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
