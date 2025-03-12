@@ -12,6 +12,14 @@ Technologies used:
 - Terraform
 - Jenkins
 
+Reusable Terraform modules:
+
+- [`aks`](https://github.com/0xtr1gger/jenkins_on_kubernetes) - creates an AKS cluster
+
+## Deploy on AKS
+
+
+
 ## Local setup 
 
 It is possble to launch Jenkins Server on a local `k3d` cluster for testing or demonstration purposes. Below are instructions on how to do that.
