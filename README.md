@@ -18,6 +18,39 @@ Reusable Terraform modules:
 
 ## Deploy on AKS
 
+### 1. Provision AKS cluster with Terraform
+
+1. Change directory to the root Terraform module:
+
+```bash
+cd terraform/aks
+```
+
+2. Initialize Terraform configuration:
+
+```bash
+terraform init
+```
+
+3. Generate execution plan:
+
+```bash
+terraform plan -out tfplan
+``` 
+
+4. Review the plan
+
+5. Apply the changes:
+
+```bash
+terraform apply tfplan
+```
+
+### 2. Configure kubectl
+
+### 3. Apply Kubernetes manifests
+
+### 4. Access Jenkins server
 
 
 ## Local setup 

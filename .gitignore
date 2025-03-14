@@ -1,4 +1,5 @@
 terraform/aks/azurek8s
+tfplan
 
 drafts/**
 
